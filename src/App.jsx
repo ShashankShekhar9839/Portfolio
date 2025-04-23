@@ -4,13 +4,17 @@ import Footer from "./sections/Footer/Footer";
 import Hero from "./sections/Hero/Hero";
 import Projects from "./sections/Projects/Projects";
 import Skills from "./sections/Skills/Skills";
+import Experince from "./sections/Experience/Experience";
+import Education from "./sections/Education/Education";
 
 function App() {
   return (
     <>
       <Hero />
-      <Projects />
+      <Experince />
       <Skills />
+      <Projects />
+      <Education />
       <Contact />
       <Footer />
     </>

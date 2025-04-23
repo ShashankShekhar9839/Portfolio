@@ -1,0 +1,24 @@
+.expCard {
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;
+  max-width: 360px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  line-height: 1.3;
+}
+
+.expCard:hover {
+  transform: scale(1.02);
+}
+
+@media (min-width: 800px) {
+  .expCard:nth-child(1) {
+    align-self: flex-start;
+  }
+
+  .expCard:nth-child(3) {
+    align-self: end;
+  }
+}
