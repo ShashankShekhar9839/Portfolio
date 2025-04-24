@@ -6,11 +6,12 @@
   width: 100%;
 }
 
-.eduLine {
+.expLine {
+  display: block;
   height: 30px;
   width: 2px;
   background-color: var(--line-border-color);
-  display: block;
+  flex-shrink: 0;
 }
 
 .eduWrap {
@@ -22,14 +23,12 @@
 }
 
 @media (min-width: 800px) {
-  .eduWrap {
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 100%;
-    width: 100%;
+  .expLine {
+    height: 220px;
   }
 
-  .eduLine {
-    height: 300px;
+  .eduWrap {
+    flex-direction: row;
+    gap: 20px;
   }
 }

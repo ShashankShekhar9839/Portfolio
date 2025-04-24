@@ -17,7 +17,7 @@ const Education = () => {
           year="2018 - 2022"
         />
 
-        <span className={styles.eduLine}></span>
+        <span className={styles.expLine}></span>
 
         <EducationCard
           course="Full Stack Training"

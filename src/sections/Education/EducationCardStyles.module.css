@@ -9,6 +9,11 @@
   flex-direction: column;
   gap: 8px;
   min-width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.eduCard:hover {
+  transform: scale(1.02);
 }
 
 .eduCard h3 {
@@ -23,5 +28,9 @@
 @media (min-width: 800px) {
   .eduCard:nth-child(1) {
     align-self: start;
+  }
+
+  .eduCard:nth-child(3) {
+    align-self: flex-end;
   }
 }
