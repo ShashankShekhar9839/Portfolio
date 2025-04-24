@@ -7,10 +7,12 @@ import Skills from "./sections/Skills/Skills";
 import Experince from "./sections/Experience/Experience";
 import Education from "./sections/Education/Education";
 import FloatingContactPanel from "./sections/FloatingContactPanel/FloatingContactPanel";
+import Header from "./sections/Header/Header";
 
 function App() {
   return (
     <>
+      <Header />
       <FloatingContactPanel />
       <Hero />
       <Experince />
