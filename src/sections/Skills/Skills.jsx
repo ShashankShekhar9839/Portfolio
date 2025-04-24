@@ -3,34 +3,49 @@ import checkMarkIconDark from "../../assets/checkmark-dark.svg";
 import checkMarkIconLight from "../../assets/checkmark-light.svg";
 import SkillList from "../../common/SkillList";
 import { useTheme } from "../../common/ThemeContext";
+import { motion } from "framer-motion";
 
 function Skills() {
   const { theme } = useTheme();
   const checkMarkIcon =
     theme === "light" ? checkMarkIconLight : checkMarkIconDark;
 
+  const skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "Node",
+    "React",
+    "Tailwind CSS",
+    "Redux",
+    "Webpack",
+    "Git",
+    "Jest",
+    "Bootstrap",
+  ];
+
   return (
     <section id="skills" className={styles.container}>
-      <h1 className="sectionTitle">Skills</h1>
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="HTML" />
-        <SkillList src={checkMarkIcon} skill="CSS" />
-        <SkillList src={checkMarkIcon} skill="JavaScript" />
-        <SkillList src={checkMarkIcon} skill="TypeScript" />
-        <SkillList src={checkMarkIcon} skill="Node" />
-      </div>
-      <hr />
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="React" />
-        <SkillList src={checkMarkIcon} skill="Tailwind CSS" />
-      </div>
-      <hr />
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="Redux" />
-        <SkillList src={checkMarkIcon} skill="Webpack" />
-        <SkillList src={checkMarkIcon} skill="Git" />
-        <SkillList src={checkMarkIcon} skill="Jest" />
-        <SkillList src={checkMarkIcon} skill="Bootstrap" />
+      <motion.h1
+        className="sectionTitle"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        Skills
+      </motion.h1>
+
+      <div className={styles.grid}>
+        {skills.map((skill, index) => (
+          <SkillList
+            key={skill}
+            skill={skill}
+            src={checkMarkIcon}
+            index={index}
+          />
+        ))}
       </div>
     </section>
   );

@@ -1,0 +1,18 @@
+.skillItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--card-bg);
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.skillItem:hover {
+  transform: scale(1.05);
+}
+
+.skillItem img {
+  width: 20px;
+}

@@ -6,10 +6,12 @@ import Projects from "./sections/Projects/Projects";
 import Skills from "./sections/Skills/Skills";
 import Experince from "./sections/Experience/Experience";
 import Education from "./sections/Education/Education";
+import FloatingContactPanel from "./sections/FloatingContactPanel/FloatingContactPanel";
 
 function App() {
   return (
     <>
+      <FloatingContactPanel />
       <Hero />
       <Experince />
       <Skills />
