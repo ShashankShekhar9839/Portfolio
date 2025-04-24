@@ -10,6 +10,7 @@ import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
 import CV from "../../assets/cv.pdf";
 import { useTheme } from "../../common/ThemeContext";
+import { motion } from "framer-motion";
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
@@ -21,11 +22,16 @@ function Hero() {
 
   return (
     <section id="hero" className={styles.container}>
-      <div className={styles.colorModeContainer}>
+      <motion.div
+        className={styles.colorModeContainer}
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 50 }}
+      >
         <img
           src={heroImg}
           className={styles.hero}
-          alt="Profile picture of Harris Johnsen"
+          alt="Profile picture of Shashank Shekhar"
         />
         <img
           className={styles.colorMode}
@@ -33,15 +39,35 @@ function Hero() {
           alt="Color mode icon"
           onClick={toggleTheme}
         />
-      </div>
-      <div className={styles.info}>
-        <h1>
+      </motion.div>
+
+      <motion.div
+        className={styles.info}
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 50, delay: 0.2 }}
+      >
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
           Shashank
           <br />
           Shekhar
-        </h1>
-        <h2>Frontend Developer</h2>
-        <span>
+        </motion.h1>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
+          Frontend Developer
+        </motion.h2>
+        <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           <a href="https://github.com/" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
@@ -54,16 +80,27 @@ function Hero() {
           <a href="https://x.com/Shashan32307136" target="_blank">
             <img src={twitterIcon} alt="Twitter icon" />
           </a>
-        </span>
-        <p className={styles.description}>
+        </motion.span>
+        <motion.p
+          className={styles.description}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+        >
           With over 2.5 years of experience and a passion for building modern
           React web apps for commercial businesses.
-        </p>
+        </motion.p>
 
-        <a href={CV} download>
+        <motion.a
+          href={CV}
+          download
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+        >
           <button className="hover">Resume</button>
-        </a>
-      </div>
+        </motion.a>
+      </motion.div>
     </section>
   );
 }
