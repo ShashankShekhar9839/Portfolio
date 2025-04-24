@@ -1,40 +1,67 @@
 import React from "react";
 import styles from "./ExperienceStyles.module.css";
 import ExperienceCard from "./ExperienceCard";
+import { motion } from "framer-motion";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+  }),
+};
 
 const Experience = () => {
+  const experienceList = [
+    {
+      title: "Software Development Engineer - 1 (FrontEnd)",
+      company: "CarTrade Tech Limited",
+      time: "April 2024 - Present",
+      description:
+        "Optimized theme library's hashing using counter-based hashing and removed unnecessary HTML elements, reducing DOM size by 20% and improving load speed.",
+    },
+    {
+      title: "Associate Software Development Engineer (FrontEnd)",
+      company: "CarTrade Tech Limited",
+      time: "Jan 2023 - March 2024",
+      description:
+        "Enhanced website performance and SEO by optimizing CLS and INP using Lighthouse, Core Web Vitals, and Chrome DevTools.",
+    },
+  ];
+
   return (
     <section className={styles.container}>
-      <h1 className="sectionTitle">Experience</h1>
+      <motion.h1
+        className="sectionTitle"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Experience
+      </motion.h1>
+
       <div className={styles.expContent}>
-        <ExperienceCard>
-          <h3>Software Development Engineer - 1 (FrontEnd)</h3>
-          <div className={styles.comp}>
-            <span>CarTrade Tech Limited</span>
-            <span>April 2024 - Present</span>
-          </div>
-
-          <span className={styles.expDesc}>
-            Optimized the theme library’s hashing algorithm by implementing
-            counter-based hashing for atomic class names and removing Carwale’s
-            unnecessary HTML elements, reducing DOM size by 20% and improving
-            page load performance
-          </span>
-        </ExperienceCard>
-        <span className={styles.expLine}></span>
-        <ExperienceCard>
-          <h3>Associate Software Development Engineer (FrontEnd)</h3>
-          <div className={styles.comp}>
-            <span>CarTrade Tech Limited</span>
-            <span>Jan 2023 - March 2024</span>
-          </div>
-
-          <span className={styles.expDesc}>
-            Improved website performance and SEO (Search Engine Optimization) by
-            optimizing CLS and INP using Google Lighthouse, Core Web Vitals, and
-            Chrome DevTools.
-          </span>
-        </ExperienceCard>
+        {experienceList.map((exp, index) => (
+          <motion.div
+            key={index}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={index}
+          >
+            <ExperienceCard>
+              <h3>{exp.title}</h3>
+              <div className={styles.comp}>
+                <span>{exp.company}</span>
+                <span>{exp.time}</span>
+              </div>
+              <span className={styles.expDesc}>{exp.description}</span>
+            </ExperienceCard>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
