@@ -35,3 +35,9 @@
   color: var(--text-color);
   line-height: 1.5;
 }
+
+.expBox {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

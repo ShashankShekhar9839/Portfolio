@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./ExperienceStyles.module.css";
 import ExperienceCard from "./ExperienceCard";
 import { motion } from "framer-motion";
+import LottieIcon from "../../common/Lottie";
+import first from "../../assets/lottie-animations/first.json";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -43,25 +45,30 @@ const Experience = () => {
       </motion.h1>
 
       <div className={styles.expContent}>
-        {experienceList.map((exp, index) => (
-          <motion.div
-            key={index}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            custom={index}
-          >
-            <ExperienceCard>
-              <h3>{exp.title}</h3>
-              <div className={styles.comp}>
-                <span>{exp.company}</span>
-                <span>{exp.time}</span>
-              </div>
-              <span className={styles.expDesc}>{exp.description}</span>
-            </ExperienceCard>
-          </motion.div>
-        ))}
+        <div>
+          <LottieIcon animationData={first} />
+        </div>
+        <div className={styles.expBox}>
+          {experienceList.map((exp, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={index}
+            >
+              <ExperienceCard>
+                <h3>{exp.title}</h3>
+                <div className={styles.comp}>
+                  <span>{exp.company}</span>
+                  <span>{exp.time}</span>
+                </div>
+                <span className={styles.expDesc}>{exp.description}</span>
+              </ExperienceCard>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

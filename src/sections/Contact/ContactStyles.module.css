@@ -20,7 +20,7 @@ input:not([type="submit"]) {
 textarea {
   padding-top: 16px;
   resize: none;
-  height: 250px;
+  height: 100px;
 }
 
 input,
@@ -60,20 +60,31 @@ input[type="submit"]:active {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 }
 
+.contact {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
 @media (width >= 800px) {
   textarea,
   input:not([type="submit"]) {
-    width: 600px;
+    width: 300px;
     font-size: 20px;
   }
   form {
     gap: 40px;
+  }
+  .contact {
+    flex-direction: row-reverse;
   }
 }
 
 @media (width >= 1400px) {
   textarea,
   input:not([type="submit"]) {
-    width: 800px;
+    width: 300px;
   }
 }
