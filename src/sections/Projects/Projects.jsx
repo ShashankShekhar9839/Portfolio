@@ -9,8 +9,8 @@ function Projects() {
   const projects = [
     {
       src: viberr,
-      link: "https://meek-centaur-af6082.netlify.app/",
-      h3: "CryptoExchange",
+      link: "https://collabrative-board-frontend.vercel.app/",
+      h3: "Collabrative Board Editor",
       p: "Crypto Currency Listing",
     },
     {
