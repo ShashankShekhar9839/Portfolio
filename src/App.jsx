@@ -8,6 +8,7 @@ import Experince from "./sections/Experience/Experience";
 import Education from "./sections/Education/Education";
 import FloatingContactPanel from "./sections/FloatingContactPanel/FloatingContactPanel";
 import Header from "./sections/Header/Header";
+import Overview from "./sections/Overview/Overview";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Header />
       <FloatingContactPanel />
       <Hero />
+      <Overview />
       <Experince />
       <Skills />
       <Projects />

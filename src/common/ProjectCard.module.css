@@ -7,15 +7,16 @@
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 300px;
-  text-decoration: none;
+  cursor: pointer; /* Ensures pointer on hover */
   color: var(--text-color);
-  border: 1px solid;
+  border: 1px solid var(--border-color); /* Added variable for border color */
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-6px); /* Hover effect to lift the card */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Enhance shadow on hover */
 }
 
 .card img {
@@ -63,7 +64,12 @@
   font-size: 16px;
 }
 
-.projectLinkWrap span a {
+.projectLinkWrap a {
   all: unset;
   align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
 }

@@ -7,6 +7,7 @@ function Projects() {
   const projects = [
     {
       link: "https://collabrative-board-frontend.vercel.app/",
+      gitLink: "https://github.com/ShashankShekhar9839/collabrative-server",
       h3: "Collabrative Board Editor",
       p: "Engineered and integrated real-time text editing and drawing board features using React.js, Socket.IO, and Node.js, enabling seamless collaboration, instant feedback, and significantly enhancing the platform's user experience.",
       techStacks: [
@@ -21,8 +22,8 @@ function Projects() {
       ],
     },
     {
-      src: "Portfolio",
       link: "https://github.com/ShashankShekhar9839/Portfolio",
+      gitLink: "https://github.com/ShashankShekhar9839/Portfolio",
       h3: "Portfolio",
       p: "Designed and developed a fully responsive personal portfolio using React.js, Context API, and Framer Motion, featuring smooth animations, dark/light theme toggling, and an optimized  experience across all devices.",
       techStacks: [
@@ -36,6 +37,7 @@ function Projects() {
     },
     {
       link: "https://guileless-paletas-eeac36.netlify.app/",
+      gitLink: "https://github.com/ShashankShekhar9839/Cryptocurrency-App",
       h3: "Crypto Exchange",
       p: "Built a fully responsive Crypto Tracker Web App using React.js, React Router, and CSS3, powered by live data from the CoinGecko API, featuring real-time coin metrics, searchable/paginated tables, and seamless mobile-friendly navigation",
       techStacks: [

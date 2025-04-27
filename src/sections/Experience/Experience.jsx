@@ -64,7 +64,7 @@ const Experience = () => {
                   <span>{exp.company}</span>
                   <span>{exp.time}</span>
                 </div>
-                <span className={styles.expDesc}>{exp.description}</span>
+                <p className={styles.expDesc}>{exp.description}</p>
               </ExperienceCard>
             </motion.div>
           ))}
