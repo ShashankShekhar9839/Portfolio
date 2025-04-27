@@ -1,29 +1,52 @@
 import styles from "./ProjectsStyles.module.css";
 import viberr from "../../assets/viberr.png";
-import freshBurger from "../../assets/fresh-burger.png";
-import hipsster from "../../assets/hipsster.png";
 import ProjectCard from "../../common/ProjectCard";
 import { motion } from "framer-motion";
 
 function Projects() {
   const projects = [
     {
-      src: viberr,
       link: "https://collabrative-board-frontend.vercel.app/",
       h3: "Collabrative Board Editor",
-      p: "Crypto Currency Listing",
+      p: "Engineered and integrated real-time text editing and drawing board features using React.js, Socket.IO, and Node.js, enabling seamless collaboration, instant feedback, and significantly enhancing the platform's user experience.",
+      techStacks: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Reactjs",
+        "Socket",
+        "Node",
+        "Render",
+        "Vercel",
+      ],
     },
     {
-      src: freshBurger,
-      link: "https://github.com/Ade-mir/company-landing-page-2",
-      h3: "Fresh Burger",
-      p: "Hamburger Restaurant",
+      src: "Portfolio",
+      link: "https://github.com/ShashankShekhar9839/Portfolio",
+      h3: "Portfolio",
+      p: "Designed and developed a fully responsive personal portfolio using React.js, Context API, and Framer Motion, featuring smooth animations, dark/light theme toggling, and an optimized  experience across all devices.",
+      techStacks: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Reactjs",
+        "Framer-motion",
+        "Render",
+      ],
     },
     {
-      src: hipsster,
-      link: "https://github.com/Ade-mir/company-landing-page-2",
-      h3: "Hipsster",
-      p: "Glasses Shop",
+      link: "https://guileless-paletas-eeac36.netlify.app/",
+      h3: "Crypto Exchange",
+      p: "Built a fully responsive Crypto Tracker Web App using React.js, React Router, and CSS3, powered by live data from the CoinGecko API, featuring real-time coin metrics, searchable/paginated tables, and seamless mobile-friendly navigation",
+      techStacks: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Reactjs",
+        "React-Router",
+        "Render",
+        "Vercel",
+      ],
     },
   ];
 

@@ -68,6 +68,33 @@ input[type="submit"]:active {
   flex-direction: column;
 }
 
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--btn-color);
+}
+
+.contactDetails a {
+  all: unset;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.contactOverView {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-align: center;
+  width: 80%;
+  align-self: center;
+}
+
 @media (width >= 800px) {
   textarea,
   input:not([type="submit"]) {
@@ -79,6 +106,13 @@ input[type="submit"]:active {
   }
   .contact {
     flex-direction: row-reverse;
+  }
+  .contactDetails {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    align-self: center;
+    margin-bottom: 16px;
   }
 }
 
