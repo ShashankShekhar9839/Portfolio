@@ -22,7 +22,7 @@ function Projects() {
       ],
     },
     {
-      link: "https://genuine-beijinho-fc3143.netlify.app/",
+      link: "/",
       gitLink: "https://github.com/ShashankShekhar9839/Portfolio",
       h3: "Portfolio",
       p: "Designed and developed a fully responsive personal portfolio using React.js, Context API, and Framer Motion, featuring smooth animations, dark/light theme toggling, and an optimized  experience across all devices.",
