@@ -8,10 +8,11 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 300px;
-  cursor: pointer; /* Ensures pointer on hover */
+  max-width: 360px;
+  cursor: pointer;
   color: var(--text-color);
-  border: 1px solid var(--border-color); /* Added variable for border color */
+  border: 1px solid var(--text-color);
+  flex-shrink: 0;
 }
 
 .card:hover {
