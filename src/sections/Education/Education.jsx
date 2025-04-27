@@ -12,8 +12,7 @@ const Education = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <h1 className="sectionTitle">Education &</h1>
-        <h1 className="sectionTitle">Certification</h1>
+        <h1 className="sectionTitle">Education</h1>
       </motion.div>
 
       <div className={styles.eduWrap}>
