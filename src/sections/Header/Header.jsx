@@ -1,7 +1,7 @@
 import styles from "./HeaderStyles.module.css";
 
 const sections = [
-  { id: "hero", label: "Home" },
+  { id: "hero", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
