@@ -8,7 +8,6 @@ import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
-import Shashank_Resume from "../../../public/Shashank_Resume.pdf";
 import { useTheme } from "../../common/ThemeContext";
 import { motion } from "framer-motion";
 
@@ -92,8 +91,9 @@ function Hero() {
         </motion.p>
 
         <motion.a
-          href={Shashank_Resume}
-          download
+          href="./Shashank_Shekhar_Resume.pdf"
+          download="Shashank_Shekhar_Resume.pdf"
+          target="_blank"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
