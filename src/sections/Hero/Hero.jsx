@@ -8,7 +8,7 @@ import githubLight from "../../assets/github-light.svg";
 import githubDark from "../../assets/github-dark.svg";
 import linkedinLight from "../../assets/linkedin-light.svg";
 import linkedinDark from "../../assets/linkedin-dark.svg";
-import CV from "../../../public/Shashank_shekhar_Resume.pdf";
+import CV from "../../../public/CV.pdf";
 import { useTheme } from "../../common/ThemeContext";
 import { motion } from "framer-motion";
 
